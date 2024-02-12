@@ -32,7 +32,14 @@ Design and implement the backend for a book store application, focusing on user 
 	- Add a feature for sending bulk email `notifications` to all the retail users about new book releases. There is one condition like in one minute only `100` `emails` can be sent. So, we need to handle this
 	condition.
 
-# Explanation of Project 
+## Technologies Used
+
+- **Node.js:** JavaScript runtime for server-side development.
+- **Express.js:** Web application framework for Node.js used for building APIs.
+- **MongoDB:** NoSQL database for storing user data, course content, and system configurations.
+- **RabbitMQ:** Message broker for handling asynchronous tasks such as email and background processing.
+
+## Explanation of Project 
 ### Run the System
 
 Clone the repo and run the command in terminal:
