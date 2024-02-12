@@ -11,10 +11,10 @@ const publisher = async (messages) => {
     await channel.assertQueue(queue, { durable: false });
 
     for (let msg of messages) {
-      await channel.sendToQueue(queue, Buffer.from(JSON.stringify(msg)));
+      channel.sendToQueue(queue, Buffer.from(JSON.stringify(msg)));
     }
 
-    await consumer();
+    // await consumer();
 
     await channel.close();
     await connect.close();

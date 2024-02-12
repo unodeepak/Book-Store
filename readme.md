@@ -1,3 +1,37 @@
+## Assignment: Back-end Development for a Book Store Application
+
+### Objective
+Design and implement the backend for a book store application, focusing on user management, book management, purchase history, and revenue tracking for authors.
+### Entities:
+* **Users:**
+	- `Types`: Author, Admin, Retail Users
+	- `Actions`: Buy books, View purchase history
+
+* **Books:**
+	- `bookId` : Unique identifier (e.g., book-1 , book-2 , ...)
+	- `authors` : Single or multiple authors
+	- `sellCount` : either store in the database or compute dynamically, based on purchase history.
+	- `title` : Unique string value -> make sure the title can be used as a slug for the book URL.
+	- `description` : Book description
+	- `price` : Range value between 100 and 1000
+
+* **Purchase History:**
+	- Unique ID format: {{YEAR}}-{{MONTH}}-{{numeric increment id}}
+	- `purchaseId` : Unique identifier (e.g., 2021-01-1 , 2021-01-2 , ...)
+	- `bookId` : Unique identifier of the book purchased
+	- `userId` : Unique identifier of the user who purchased the book
+	- `purchaseDate` : Date of purchase
+	- `price` : Price of the book at the time of purchase
+* **Revenue Tracking for Authors:**
+	- Increase in author's revenue on user purchase
+	- Notify authors about purchase information
+	- Email authors with current month, current year, and total revenue
+* **Email Notification:**
+	- Use a background job or a message queue to handle email notifications asynchronously.
+	- Include relevant purchase information in the email.
+	- Add a feature for sending bulk email `notifications` to all the retail users about new book releases. There is one condition like in one minute only `100` `emails` can be sent. So, we need to handle this
+	condition.
+
 # Explanation of Project 
 ### Run the System
 
