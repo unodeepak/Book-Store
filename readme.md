@@ -36,7 +36,7 @@ Design and implement the backend for a book store application, focusing on user 
 
 - **Node.js:** JavaScript runtime for server-side development.
 - **Express.js:** Web application framework for Node.js used for building APIs.
-- **MongoDB:** NoSQL database for storing user data, course content, and system configurations.
+- **MongoDB:** NoSQL database for storing data.
 - **RabbitMQ:** Message broker for handling asynchronous tasks such as email and background processing.
 
 ## Explanation of Project 
